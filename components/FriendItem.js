@@ -7,7 +7,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons'
 function FriendItem({ friend, navigation }){
 
   const goToDetail = () => {
-    navigation.navigate('Detail')
+    navigation.navigate('Detail', friend)
   }
 
   return (

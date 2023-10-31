@@ -1,19 +1,25 @@
-import React from 'react'
-import { View, StyleSheet, Text } from 'react-native'
-import Search from './screens/Search'
+import React from "react";
+import { View, Text, StyleSheet, ActivityIndicator } from 'react-native'
+import { NavigationContainer } from '@react-navigation/native'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
-function App({ navigation }){
+import Search from './screens/Search';
+import Detail from "./screens/Detail";
 
+const Stack = createNativeStackNavigator();
+
+function App(){
   return (
-    <View>
-      <Text>
-        홈화면
-      </Text>
-      
-      <Search navigation={navigation}/>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator
+        initialRouteName="Search"
+        screenOptions={{ headerShown: false }}
+      >
+        <Stack.Screen name="Search" component={Search}/>
+        <Stack.Screen name="Detail" component={Detail}/>
+      </Stack.Navigator>
+    </NavigationContainer>
   )
-
 }
 
 export default App
