@@ -43,15 +43,18 @@ function Detail({ navigation, route }){
           </View>
 
           <View style={styles.profileContainer}>
-            <FlatList
-              data={userCategory}
-              keyExtractor={item => item}
-              renderItem={({item}) => (
-                <Text style={styles.text}>
-                  {item}
-                </Text>
-              )}
-            />
+            <View style={{ marginRight: 30 }}>
+              <FlatList
+                data={userCategory}
+                keyExtractor={item => item}
+                renderItem={({item}) => (
+                  <Text style={styles.text}>
+                    {item}
+                  </Text>
+                )}
+              />
+            </View>
+            
 
             <View>
               {loading? '' : 
@@ -60,11 +63,8 @@ function Detail({ navigation, route }){
               })
               }
             </View>
-            
-            
           </View>
         </View>
-        
       </View>
     </SafeAreaView>
     
