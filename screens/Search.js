@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { View, Text } from 'react-native'
 
 import FriendsList from '../components/FriendsList'
+import SearchFriend from '../components/SearchFriend'
 
 function Search(){
 
@@ -11,10 +12,12 @@ function Search(){
     { id: 3, name: '샛별', email: 'venus@kakao.com', address: '부산광역시', interest: '게임' },
   ]) 
 
+  const [ searchText, setSearchText ] = useState('')
+
   return (
     <View>
-      <Text>친구 목록 검색</Text>
-      <FriendsList friends={friends}/>
+      <SearchFriend searchText={searchText} setSearchText={setSearchText}/>
+      <FriendsList friends={friends} searchText={searchText}/>
     </View>
   )
 }
