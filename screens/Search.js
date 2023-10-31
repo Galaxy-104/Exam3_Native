@@ -4,7 +4,7 @@ import { View, Text } from 'react-native'
 import FriendsList from '../components/FriendsList'
 import SearchFriend from '../components/SearchFriend'
 
-function Search(){
+function Search({ navigation }){
 
   const [ friends, setFriends ] = useState([
     { id: 1, name: '우주', email: 'uzu@naver.com', address: '서울특별시', interest: '노래' },
@@ -17,7 +17,7 @@ function Search(){
   return (
     <View>
       <SearchFriend searchText={searchText} setSearchText={setSearchText}/>
-      <FriendsList friends={friends} searchText={searchText}/>
+      <FriendsList friends={friends} searchText={searchText} navigation={navigation}/>
     </View>
   )
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import { View, StyleSheet, Text } from 'react-native'
 import Search from './screens/Search'
 
-function App(){
+function App({ navigation }){
 
   return (
     <View>
@@ -10,7 +10,7 @@ function App(){
         홈화면
       </Text>
       
-      <Search/>
+      <Search navigation={navigation}/>
     </View>
   )
 

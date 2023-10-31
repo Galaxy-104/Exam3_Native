@@ -1,10 +1,15 @@
 import React from "react";
-import { View, Text, StyleSheet, Image } from 'react-native'
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
 
 import Profile from '../assets/imgs/profile.png'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 
-function FriendItem({ friend }){
+function FriendItem({ friend, navigation }){
+
+  const goToDetail = () => {
+    navigation.navigate('Detail')
+  }
+
   return (
     <View style={styles.friendContainer}>
       <View style={{ flexDirection: 'row' }}>
@@ -18,9 +23,9 @@ function FriendItem({ friend }){
         </View>
       </View>
 
-      <View>
+      <TouchableOpacity onPress={goToDetail}>
         <Icon name="arrow-forward-ios" color="#333" size={25}/>
-      </View>
+      </TouchableOpacity>
     </View>
   )
 }
