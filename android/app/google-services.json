@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "967855114173",
+    "project_id": "examnative",
+    "storage_bucket": "examnative.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:967855114173:android:7b977e958f234bb3ef74d4",
+        "android_client_info": {
+          "package_name": "com.examnative"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIfzR9xXs6kX4orCPbp4A1l76tHiBkmXw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { View, Text, Pressable, StyleSheet, SafeAreaView, Modal, TextInput } from 'react-native'
+import { addData, getCollection, getCurrentTime } from '../apis/firebase'
 
 import FriendsList from '../components/FriendsList'
 import SearchFriend from '../components/SearchFriend'
@@ -17,12 +18,19 @@ function Search({ navigation }){
   const [ searchText, setSearchText ] = useState('')
   const [ modalOpen, setModalOpen ] = useState(false) 
 
+  const [ friendName, setFriendName ] = useState('')
+  const [ friendEmail, setFriendEmail ] = useState('')
+  const [ friendAddress, setFriendAddress ] = useState('')
+  const [ friendInterest, setFriendInterest ] = useState('')
   
   const addFriend = () => {
     setModalOpen(true)
   }
   const closeModal = () => {
     setModalOpen(false)
+  }
+  const inputName = (e) => {
+    setFriendName(e.target.value)
   }
 
   return (
